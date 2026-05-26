@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yash Pandey | AI & Software Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Legacy | Sakshi • Sonakshi • Shruti • Yash • Pratyush</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-  <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -34,26 +30,26 @@
     body::before{
       content:'';
       position:fixed;
-      width:500px;
-      height:500px;
+      width:600px;
+      height:600px;
       background:linear-gradient(45deg,#00c6ff,#7f5af0);
-      filter:blur(150px);
-      top:-200px;
-      left:-150px;
-      opacity:.3;
+      filter:blur(180px);
+      top:-250px;
+      left:-200px;
+      opacity:.25;
       z-index:-1;
     }
 
     body::after{
       content:'';
       position:fixed;
-      width:400px;
-      height:400px;
-      background:linear-gradient(45deg,#7f5af0,#00f5d4);
-      filter:blur(140px);
-      bottom:-150px;
-      right:-100px;
-      opacity:.25;
+      width:500px;
+      height:500px;
+      background:linear-gradient(45deg,#ff4ecd,#00f5d4);
+      filter:blur(180px);
+      bottom:-250px;
+      right:-200px;
+      opacity:.2;
       z-index:-1;
     }
 
@@ -61,14 +57,15 @@
       position:fixed;
       width:100%;
       top:0;
+      left:0;
       padding:20px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      backdrop-filter:blur(15px);
       background:rgba(255,255,255,0.05);
-      z-index:1000;
+      backdrop-filter:blur(15px);
       border-bottom:1px solid rgba(255,255,255,0.08);
+      z-index:999;
     }
 
     nav h2{
@@ -80,8 +77,8 @@
 
     nav ul{
       display:flex;
-      gap:30px;
       list-style:none;
+      gap:30px;
     }
 
     nav ul li a{
@@ -102,49 +99,51 @@
     .hero{
       min-height:100vh;
       display:flex;
+      justify-content:center;
       align-items:center;
-      justify-content:space-between;
-      gap:50px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
     }
 
-    .hero-text{
-      flex:1;
+    .hero-content{
+      max-width:1000px;
+      z-index:2;
     }
 
-    .hero-text h1{
-      font-size:75px;
+    .hero h1{
+      font-size:85px;
       line-height:1.1;
       font-weight:800;
+      margin-bottom:30px;
     }
 
     .gradient{
-      background:linear-gradient(to right,#00c6ff,#7f5af0);
+      background:linear-gradient(to right,#00c6ff,#7f5af0,#ff4ecd);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
 
-    .hero-text p{
-      margin-top:25px;
+    .hero p{
+      font-size:20px;
       color:#cbd5e1;
-      line-height:1.8;
-      font-size:18px;
-      max-width:700px;
+      line-height:1.9;
     }
 
     .btns{
-      margin-top:35px;
+      margin-top:40px;
       display:flex;
+      justify-content:center;
       gap:20px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:15px 35px;
+      padding:16px 38px;
       border-radius:50px;
       text-decoration:none;
       font-weight:600;
       transition:.4s;
-      display:inline-block;
     }
 
     .primary{
@@ -153,161 +152,159 @@
     }
 
     .secondary{
-      border:1px solid rgba(255,255,255,0.2);
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.1);
       color:white;
-      background:rgba(255,255,255,0.05);
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(15px);
     }
 
     .btn:hover{
       transform:translateY(-5px);
-      box-shadow:0 10px 30px rgba(127,90,240,.4);
-    }
-
-    .hero-image{
-      flex:1;
-      display:flex;
-      justify-content:center;
-      position:relative;
-    }
-
-    .hero-image img{
-      width:450px;
-      border-radius:30px;
-      object-fit:cover;
-      border:2px solid rgba(255,255,255,0.1);
-      box-shadow:0 0 50px rgba(0,198,255,.3);
+      box-shadow:0 15px 40px rgba(0,198,255,.3);
     }
 
     .section-title{
-      font-size:50px;
-      margin-bottom:60px;
       text-align:center;
+      font-size:55px;
+      margin-bottom:70px;
     }
 
-    .cards{
+    .story-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
     }
 
-    .card{
+    .story-card{
       background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(15px);
-      padding:35px;
-      border-radius:25px;
-      transition:.4s;
+      border-radius:30px;
       overflow:hidden;
-      position:relative;
+      transition:.4s;
+      backdrop-filter:blur(20px);
     }
 
-    .card:hover{
-      transform:translateY(-10px);
+    .story-card:hover{
+      transform:translateY(-12px);
+      box-shadow:0 20px 50px rgba(127,90,240,.25);
       border:1px solid rgba(0,198,255,.4);
-      box-shadow:0 20px 40px rgba(0,198,255,.15);
     }
 
-    .card i{
-      font-size:40px;
-      margin-bottom:20px;
-      color:#00c6ff;
+    .story-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
     }
 
-    .card h3{
+    .story-content{
+      padding:30px;
+    }
+
+    .story-content h3{
+      font-size:28px;
       margin-bottom:15px;
-      font-size:24px;
     }
 
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:20px;
-      justify-content:center;
-    }
-
-    .skill{
-      padding:14px 28px;
-      border-radius:50px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.1);
-      transition:.3s;
-    }
-
-    .skill:hover{
-      background:linear-gradient(to right,#00c6ff,#7f5af0);
-      transform:scale(1.05);
+    .story-content p{
+      color:#cbd5e1;
+      line-height:1.8;
     }
 
     .timeline{
-      display:flex;
-      flex-direction:column;
-      gap:30px;
+      position:relative;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:0;
+      width:4px;
+      height:100%;
+      background:linear-gradient(#00c6ff,#7f5af0);
+      transform:translateX(-50%);
     }
 
     .timeline-item{
+      width:50%;
       padding:30px;
+      position:relative;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+      text-align:right;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-content{
       background:rgba(255,255,255,0.05);
-      border-left:5px solid #00c6ff;
-      border-radius:15px;
+      padding:30px;
+      border-radius:25px;
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
     }
 
-    .contact{
+    .timeline-content h3{
+      margin-bottom:15px;
+      color:#00c6ff;
+    }
+
+    .quote{
       text-align:center;
+      font-size:34px;
+      line-height:1.8;
+      font-weight:600;
+      max-width:1000px;
+      margin:auto;
+      color:#e2e8f0;
     }
 
-    .contact h2{
-      margin-bottom:20px;
-    }
-
-    .socials{
-      margin-top:30px;
-      display:flex;
-      justify-content:center;
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
     }
 
-    .socials a{
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,0.08);
-      color:white;
-      font-size:24px;
+    .gallery img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      border-radius:25px;
       transition:.4s;
-      text-decoration:none;
     }
 
-    .socials a:hover{
-      background:linear-gradient(to right,#00c6ff,#7f5af0);
-      transform:translateY(-8px);
+    .gallery img:hover{
+      transform:scale(1.04);
     }
 
-    footer{
-      padding:30px;
+    .footer{
+      padding:60px 20px;
       text-align:center;
-      color:#94a3b8;
       border-top:1px solid rgba(255,255,255,0.08);
+      color:#94a3b8;
     }
 
     @media(max-width:900px){
 
-      .hero{
-        flex-direction:column;
-        text-align:center;
-        padding-top:100px;
+      .hero h1{
+        font-size:55px;
       }
 
-      .hero-text h1{
-        font-size:50px;
+      .timeline::before{
+        left:10px;
       }
 
-      .hero-image img{
+      .timeline-item{
         width:100%;
-        max-width:350px;
+        left:0 !important;
+        padding-left:40px;
+        text-align:left !important;
       }
 
       nav ul{
@@ -315,168 +312,151 @@
       }
 
       .section-title{
-        font-size:38px;
+        font-size:40px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
   <nav>
-    <h2>YASH.</h2>
+
+    <h2>THE LEGACY</h2>
 
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#moments">Moments</a></li>
+      <li><a href="#legacy">Legacy</a></li>
     </ul>
+
   </nav>
 
   <!-- HERO -->
 
   <section class="hero">
 
-    <div class="hero-text" data-aos="fade-right">
+    <div class="hero-content">
 
       <h1>
-        Building <span class="gradient">Intelligent</span><br>
-        Systems & Premium<br>
-        Digital Experiences
+        Five Souls.<br>
+        One <span class="gradient">Beautiful Story</span>
       </h1>
 
       <p>
-        I'm Yash Pandey, a Computer Science undergraduate passionate about
-        Machine Learning, NLP, scalable systems, and modern web technologies.
-        I build impactful software solutions with a strong foundation in DSA,
-        Java, Python, and AI-driven technologies.
+        Sakshi, Sonakshi, Shruti, Yash, and Pratyush —
+        connected not only by blood, but by memories,
+        dreams, laughter, chaos, sacrifices, and an unbreakable bond.
+        This is more than a family. This is a legacy.
       </p>
 
       <div class="btns">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
-      </div>
-
-    </div>
-
-    <div class="hero-image" data-aos="fade-left">
-      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1974&auto=format&fit=crop"
-        alt="developer">
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <h2 class="section-title gradient" data-aos="zoom-in">About Me</h2>
-
-    <div class="cards">
-
-      <div class="card" data-aos="fade-up">
-        <i class="fas fa-code"></i>
-        <h3>Software Development</h3>
-        <p>
-          Strong foundation in Java, Python, SQL, OOP, DSA,
-          and scalable application development.
-        </p>
-      </div>
-
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-brain"></i>
-        <h3>AI & Machine Learning</h3>
-        <p>
-          Experienced with NLP, Scikit-learn, predictive systems,
-          and intelligent data-driven applications.
-        </p>
-      </div>
-
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-rocket"></i>
-        <h3>Startup Experience</h3>
-        <p>
-          Worked in startup environments handling content strategy,
-          consulting, ideation, and execution.
-        </p>
+        <a href="#story" class="btn primary">Explore Story</a>
+        <a href="#moments" class="btn secondary">View Moments</a>
       </div>
 
     </div>
 
   </section>
 
-  <!-- SKILLS -->
+  <!-- STORY -->
 
-  <section id="skills">
+  <section id="story">
 
-    <h2 class="section-title gradient" data-aos="zoom-in">Tech Stack</h2>
+    <h2 class="section-title gradient">The Siblings</h2>
 
-    <div class="skills">
+    <div class="story-grid">
 
-      <div class="skill">Python</div>
-      <div class="skill">Java</div>
-      <div class="skill">C++</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">NLP</div>
-      <div class="skill">Scikit Learn</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Linux</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">React</div>
+      <div class="story-card">
 
-    </div>
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop">
 
-  </section>
+        <div class="story-content">
 
-  <!-- PROJECTS -->
+          <h3>Sakshi</h3>
 
-  <section id="projects">
+          <p>
+            The calm strength of the family —
+            graceful, caring, and the one who always
+            keeps everyone emotionally connected.
+          </p>
 
-    <h2 class="section-title gradient" data-aos="zoom-in">Featured Projects</h2>
-
-    <div class="cards">
-
-      <div class="card" data-aos="fade-up">
-
-        <i class="fas fa-film"></i>
-
-        <h3>Movie Name Identifier</h3>
-
-        <p>
-          NLP & ML based framework that identifies movie names
-          from unstructured social media comments using TF-IDF
-          and classification models.
-        </p>
+        </div>
 
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="150">
+      <div class="story-card">
 
-        <i class="fas fa-heartbeat"></i>
+        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1974&auto=format&fit=crop">
 
-        <h3>Heart Disease Prediction</h3>
+        <div class="story-content">
 
-        <p>
-          Predictive healthcare system built using Decision Tree
-          algorithms with optimized feature engineering and data analysis.
-        </p>
+          <h3>Sonakshi</h3>
+
+          <p>
+            The spark of energy and positivity,
+            bringing laughter into every room and
+            making ordinary moments unforgettable.
+          </p>
+
+        </div>
 
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <div class="story-card">
 
-        <i class="fas fa-chart-line"></i>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop">
 
-        <h3>Data Analytics</h3>
+        <div class="story-content">
 
-        <p>
-          Worked on data analysis workflows using Python,
-          Pandas, Matplotlib, and visualization tools.
-        </p>
+          <h3>Shruti</h3>
+
+          <p>
+            The creative soul —
+            thoughtful, expressive, and someone
+            who sees beauty where others miss it.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="story-card">
+
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop">
+
+        <div class="story-content">
+
+          <h3>Yash</h3>
+
+          <p>
+            The visionary and dream chaser —
+            passionate about building, learning,
+            and creating a future beyond limits.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="story-card">
+
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop">
+
+        <div class="story-content">
+
+          <h3>Pratyush</h3>
+
+          <p>
+            The silent backbone —
+            dependable, grounded, and the one
+            everyone can count on no matter what.
+          </p>
+
+        </div>
 
       </div>
 
@@ -484,38 +464,72 @@
 
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- JOURNEY -->
 
-  <section id="experience">
+  <section id="journey">
 
-    <h2 class="section-title gradient" data-aos="zoom-in">Experience</h2>
+    <h2 class="section-title gradient">Their Journey</h2>
 
     <div class="timeline">
 
-      <div class="timeline-item" data-aos="fade-right">
+      <div class="timeline-item">
 
-        <h3>Infludity Solutions</h3>
+        <div class="timeline-content">
 
-        <h4>Content Creator • 2026 - Present</h4>
+          <h3>Childhood</h3>
 
-        <p>
-          Worked in startup consulting environment contributing
-          to digital strategy, client understanding, execution,
-          and impactful content development.
-        </p>
+          <p>
+            From playful chaos to endless evenings together,
+            their bond was built on laughter and shared dreams.
+          </p>
+
+        </div>
 
       </div>
 
-      <div class="timeline-item" data-aos="fade-left">
+      <div class="timeline-item">
 
-        <h3>Machine Learning Projects</h3>
+        <div class="timeline-content">
 
-        <h4>AI & NLP Development</h4>
+          <h3>Growing Together</h3>
 
-        <p>
-          Built practical AI solutions focusing on NLP,
-          healthcare prediction systems, and scalable software logic.
-        </p>
+          <p>
+            Different personalities, different ambitions —
+            yet always connected through love and support.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-content">
+
+          <h3>Facing Challenges</h3>
+
+          <p>
+            Every difficult phase strengthened the family,
+            turning struggles into unforgettable lessons.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-content">
+
+          <h3>The Future</h3>
+
+          <p>
+            A story still being written —
+            with dreams bigger than fear
+            and a bond stronger than distance.
+          </p>
+
+        </div>
 
       </div>
 
@@ -523,49 +537,56 @@
 
   </section>
 
-  <!-- CONTACT -->
+  <!-- QUOTE -->
 
-  <section id="contact" class="contact">
+  <section>
 
-    <h2 class="section-title gradient" data-aos="zoom-in">Let's Build Something Amazing</h2>
+    <div class="quote">
+      “Some people are born into ordinary families.
+      Others are born into stories that become legends.”
+    </div>
 
-    <p data-aos="fade-up">
-      Open for internships, collaborations, freelance opportunities,
-      and innovative software engineering projects.
-    </p>
+  </section>
 
-    <div class="socials">
+  <!-- GALLERY -->
 
-      <a href="mailto:23053367@kiit.ac.in">
-        <i class="fas fa-envelope"></i>
-      </a>
+  <section id="moments">
 
-      <a href="https://github.com/" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
+    <h2 class="section-title gradient">Captured Moments</h2>
 
-      <a href="https://linkedin.com/in/8yashpandey8" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1974&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1974&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1974&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1974&auto=format&fit=crop">
 
     </div>
 
   </section>
 
-  <footer>
-    © 2026 Yash Pandey • Designed with Premium AI Inspired UI
-  </footer>
+  <!-- LEGACY -->
 
-  <!-- AOS -->
+  <section id="legacy">
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <h2 class="section-title gradient">The Legacy Continues</h2>
 
-  <script>
-    AOS.init({
-      duration:1000,
-      once:true
-    });
-  </script>
+    <div class="quote">
+      Five different personalities.<br>
+      Five different dreams.<br><br>
+
+      Yet one heartbeat connects them all —
+      family.
+    </div>
+
+  </section>
+
+  <div class="footer">
+    © 2026 • The Story of Sakshi, Sonakshi, Shruti, Yash & Pratyush
+  </div>
 
 </body>
 </html>
